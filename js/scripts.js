@@ -884,64 +884,6 @@ function initZonar() {
         });
     }
     hoverdirInit();
-    //   cursor ------------------
-    $(".pr-det-container , .column-wrap").on({
-        mouseenter: function () {
-            $(".element-item").addClass("white_blur");
-        },
-        mouseleave: function () {
-            $(".element-item").removeClass("white_blur");
-        }
-    });
-    $(".column-wrap.dark-bg").on({
-        mouseenter: function () {
-            $(".element-item").removeClass("white_blur");
-        },
-        mouseleave: function () {
-            $(".element-item").removeClass("white_blur");
-        }
-    });
-    $("a , .btn ,   textarea,   input  , .leaflet-control-zoom , .aside-show_cf , .close-contact_form , .closedet_style ").on({
-        mouseenter: function () {
-            $(".element-item").addClass("elem_hover");
-        },
-        mouseleave: function () {
-            $(".element-item").removeClass("elem_hover");
-        }
-    });
-    $("  .swiper-slide ,  #portfolio_horizontal_container").on({
-        mouseenter: function () {
-            $(".element-item").addClass("slider_hover");
-        },
-        mouseleave: function () {
-            $(".element-item").removeClass("slider_hover");
-        }
-    });
-    $(".swiper-slide a , .next-project-swiper-link , #portfolio_horizontal_container a").on({
-        mouseenter: function () {
-            $(".element-item").removeClass("slider_hover");
-        },
-        mouseleave: function () {
-            $(".element-item").addClass("slider_hover");
-        }
-    });
-
-    $(".next-project-swiper-link").on({
-        mouseenter: function () {
-            $(".element-item").addClass("slider_linknext");
-        },
-        mouseleave: function () {
-            $(".element-item").removeClass("slider_linknext");
-        }
-    });
-    $(".nav-overlay , .det-overlay").on({
-        mouseenter: function () {
-            $(".element-item").addClass("close-icon");
-        },
-        mouseleave: function () {
-            $(".element-item").removeClass("close-icon");
-        }
-    });
     //   Contact form------------------
     $("#contactform").submit(function () {
         var a = $(this).attr("action");
