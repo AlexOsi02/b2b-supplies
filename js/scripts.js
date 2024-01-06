@@ -211,7 +211,7 @@ function initZonar() {
                 prevEl: '.hsc-prev',
             },
             autoplay: {
-                delay: 2500,
+                delay: 6000,
                 disableOnInteraction: false
             },
         });
