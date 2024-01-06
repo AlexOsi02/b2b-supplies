@@ -258,20 +258,6 @@ function initZonar() {
         });
         j.controller.control = imageSwiper;
         imageSwiper.controller.control = j;
-        var autobtn = $(".play-pause_slider");
-        function autoEnd() {
-            autobtn.removeClass("auto_actslider");
-            j.autoplay.stop();
-        }
-        function autoStart() {
-            autobtn.addClass("auto_actslider");
-            j.autoplay.start();
-        }
-        autobtn.on("click", function () {
-            if (autobtn.hasClass("auto_actslider")) autoEnd();
-            else autoStart();
-            return false;
-        });
         setTimeout(function () {
             j.init();
             var totalSlides = j.slides.length - 2;
