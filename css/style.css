@@ -2031,6 +2031,7 @@ section.parallax-section .bg {
 	font-size: 10px;
 	letter-spacing: 2px;
 	transition: all 300ms linear;
+	pointer-events: none;
 }
 .accordion a.toggle span {
 	position: absolute;
