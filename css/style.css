@@ -374,18 +374,20 @@ blockquote p {
 	bottom:340px;
 	left:50%;
 	margin-left:-22px;
-	width:40px;
+	width:46px;
 }
 .left-header_social li {
-	width:40px;
+	width:46px;
 	height:40px;
 	line-height:40px;
 	box-sizing:border-box;
 	display:inline-table;
 	background:#313131;
 	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-right: 6px solid rgb(245, 117, 0);
 	border-top:none;
 	position:relative;
+	font-size: 18px;
 }
 .left-header_social li:before {
 	content:'';
