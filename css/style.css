@@ -346,7 +346,7 @@ blockquote p {
 	position:fixed;
 	top:80px;
 	left:0;
-	bottom:150px;
+	bottom:0;
 	z-index:22;
 	width:80px;
    -webkit-transform: translate3d(0,0,0)
@@ -371,7 +371,7 @@ blockquote p {
 }
 .left-header_social {
 	position:absolute;
-	bottom:190px;
+	bottom:340px;
 	left:50%;
 	margin-left:-22px;
 	width:40px;
@@ -709,7 +709,7 @@ blockquote p {
 	-webkit-transform: translate3d(0, 0, 0);
 }
 .nh_vis {
-	right:30%;
+	right:0;
 }
 .nav-holder-wrap {
 	position: absolute;
@@ -4809,9 +4809,6 @@ section.parallax-section .bg {
 .hero-section-dec   ,  .share-btn , .body-color-bg {
     right:0;
 }
-.nav-button  , .main-header:before , .nh_vis{
-	right:150px;
-}
 .share-btn {
     width: 150px;
     height: 80px;
@@ -5220,9 +5217,6 @@ section.parallax-section .bg {
 }
 .share-btn span , .hero-slider_control-wrap  {
 	left: 0;
-}
-.nav-button, .main-header:before {
-    right: 80px;
 }
 .nh_vis {
     right: 0;
