@@ -5339,3 +5339,11 @@ section.parallax-section .bg {
 		background-position: center;
 	}
 }
+
+.infographics {
+	position: sticky;
+	padding: 0 50px;
+	padding-top: 140px;
+	width: 100%;
+	z-index: 100;
+}
