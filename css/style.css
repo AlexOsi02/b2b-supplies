@@ -269,7 +269,7 @@ blockquote p {
 	position:fixed;
 	top:0;
 	left:0;
-	width:70%;
+	width:100%;
 	z-index:20;
 	height:80px;
 	background:#313131;
@@ -310,7 +310,6 @@ blockquote p {
 	right:0;
 	height:100%;
 	top:0;
-	background:rgba(255,255,255,0.05);
 }
 .header-contacts ul {
 	float:right;
