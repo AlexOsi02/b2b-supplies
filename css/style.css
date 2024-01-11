@@ -3903,6 +3903,7 @@ section.parallax-section .bg {
 }
 .content-inner {
 	width:500px;
+	height: 470px;
 	color: #fff;
 	position: absolute;
 	left:150px;

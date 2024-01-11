@@ -128,23 +128,30 @@
                         </div>
                         <div id="contact-form" class="fl-wrap">
                            <div id="message"></div>
-                           <form  class="custom-form" action="php/contact.php" name="contactform" id="contactform">
-                              <fieldset>
-                                 <div class="row">
-                                    <div class="col-sm-6">
-                                       <input type="text" name="name" id="name" placeholder="Ваше имя *" value=""/>
+                            <form class="custom-form" name="contactform">
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <input type="text" name="name" id="name" placeholder="Ваше имя *" value="" maxlength="30" required><br>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="phone" id="phone" placeholder="Ваш номер телефона *" value="" maxlength="12"  required><br>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="text" name="email" id="email" placeholder="Email адрес *" value="" maxlength="30" required><br>
+                                        </div>
                                     </div>
-									<div class="col-sm-6">
-                                       <input type="text" name="phone" id="phone" placeholder="Ваш номер телефона *" value=""/>
-                                    </div>
-                                    <div class="col-sm-6">
-                                       <input type="text"  name="email" id="email" placeholder="Email адрес *" value=""/>
-                                    </div>
-                                 </div>
-                                 <textarea name="comments"  id="comments" cols="40" rows="3" placeholder="Ваше сообщение:" class="cnt-anim"></textarea>
-                                 <button class="btn fl-btn color-bg" id="submit"><span>Отправить сообщение</span> </button>
-                              </fieldset>
-                           </form>
+
+                                    <!-- Hidden Required Fields -->
+                                    <input type="hidden" name="project_name" value="b2b-supplies">
+                                    <input type="hidden" name="admin_email" value="admin@mail.com">
+                                    <input type="hidden" name="form_subject" value="Form Subject">
+                                    <!-- END Hidden Required Fields -->
+
+                                    <textarea name="comments" id="comments" cols="40" rows="3" placeholder="Ваше сообщение:" class="cnt-anim" maxlength="500"></textarea>
+                                    <button class="btn fl-btn color-bg"><span>Отправить сообщение</span> </button>
+                                </fieldset>
+                            </form>
                         </div>
                      </div>
                   </div>
