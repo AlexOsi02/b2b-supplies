@@ -1238,6 +1238,7 @@ nav.nav-inner {
 	right:30px;
 	margin-bottom:-15px;
 	bottom:50%;
+	cursor: pointer;
 }
 .hero-scroll-down-notifer i{
 	position:absolute;

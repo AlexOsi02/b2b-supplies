@@ -192,7 +192,6 @@ function initZonar() {
         var j = new Swiper(".fs-gallery-wrap .swiper-container", {
             preloadImages: false,
             loop: true,
-            grabCursor: true,
             centeredSlides: false,
             resistance: true,
             resistanceRatio: 0.6,
@@ -200,7 +199,6 @@ function initZonar() {
             spaceBetween: 0,
             parallax: false,
             effect: "slide",
-            mousewheel: true,
 			init:false,
             pagination: {
                 el: '.hero-slider-wrap_pagination',
@@ -213,6 +211,10 @@ function initZonar() {
             autoplay: {
                 delay: 6000,
                 disableOnInteraction: false
+            },
+            keyboard: {
+                enabled: true,
+                onlyInViewport: false,
             },
         });
 
@@ -1326,7 +1328,6 @@ function readyFunctions() {
 }
 
 $(document).ready(function() {
-    console.log('222')
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
@@ -1343,4 +1344,15 @@ $(document).ready(function() {
         });
         return false;
     });
+});
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    const scrollDown = document.getElementById('scroll-down')
+
+    scrollDown.addEventListener('click',() => {
+        window.scrollBy({
+            top: document.body.scrollHeight,
+            behavior : "smooth"
+        });
+    })
 });
