@@ -1351,6 +1351,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const btnHeader = document.getElementById("modal-header");
     const span = document.getElementsByClassName("close")[0];
 
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const name = document.getElementById('name');
+    const comments = document.getElementById('comments');
+    const phone1 = document.getElementById('phone1');
+    const email1 = document.getElementById('email1');
+    const name1 = document.getElementById('name1');
+    const comments1 = document.getElementById('comments1');
+
     const currentYear = new Date().getFullYear();
 
     if(btn) {
@@ -1365,22 +1374,83 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     // When the user clicks on <span> (x), close the modal
     span.onclick = function() {
+        if (phone?.value || email?.value) {
+            $.ajax({
+                type: "POST",
+                url: "../php/mail.php", //Change
+                data: `name=${name?.value || 'Имя отсутствует'}&phone=${phone?.value || 'Телефон отсутствует'}&email=${email?.value || 'Почта отсутствует'}&project_name=b2b-supplies&admin_email=admin%40mail.com&form_subject=Form+Subject&comments=${comments?.value || 'Сообщение отсутствует'}`
+            }).done(function() {
+                modal.style.display = "none";
+            });
+        }
+        if (phone1?.value || email1?.value) {
+            $.ajax({
+                type: "POST",
+                url: "../php/mail.php", //Change
+                data: `name=${name1?.value || 'Имя отсутствует'}&phone=${phone1?.value || 'Телефон отсутствует'}&email=${email1?.value || 'Почта отсутствует'}&project_name=b2b-supplies&admin_email=admin%40mail.com&form_subject=Form+Subject&comments=${comments1?.value || 'Сообщение отсутствует'}`
+            }).done(function() {
+                modal.style.display = "none";
+            });
+        }
         modal.style.display = "none";
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function(event) {
         if (event.target == modal) {
+            if (phone?.value || email?.value) {
+                $.ajax({
+                    type: "POST",
+                    url: "../php/mail.php", //Change
+                    data: `name=${name?.value || 'Имя отсутствует'}&phone=${phone?.value || 'Телефон отсутствует'}&email=${email?.value || 'Почта отсутствует'}&project_name=b2b-supplies&admin_email=admin%40mail.com&form_subject=Form+Subject&comments=${comments?.value || 'Сообщение отсутствует'}`
+                }).done(function() {
+                    modal.style.display = "none";
+                });
+            }
+            if (phone1?.value || email1?.value) {
+                $.ajax({
+                    type: "POST",
+                    url: "../php/mail.php", //Change
+                    data: `name=${name1.value || 'Имя отсутствует'}&phone=${phone1?.value || 'Телефон отсутствует'}&email=${email1?.value || 'Почта отсутствует'}&project_name=b2b-supplies&admin_email=admin%40mail.com&form_subject=Form+Subject&comments=${comments1?.value || 'Сообщение отсутствует'}`
+                }).done(function() {
+                    modal.style.display = "none";
+                });
+            }
+
             modal.style.display = "none";
+            return false;
         }
     }
+
+    window.addEventListener('beforeunload', function (e) {
+        if (phone.value || email.value) {
+            $.ajax({
+                type: "POST",
+                url: "../php/mail.php", //Change
+                data: `name=${name?.value || 'Имя отсутствует'}&phone=${phone?.value || 'Телефон отсутствует'}&email=${email?.value || 'Почта отсутствует'}&project_name=b2b-supplies&admin_email=admin%40mail.com&form_subject=Form+Subject&comments=${comments?.value || 'Сообщение отсутствует'}`
+            }).done(function() {
+                modal.style.display = "none";
+            });
+            e.preventDefault();
+        }
+        if (phone1?.value || email1?.value) {
+            $.ajax({
+                type: "POST",
+                url: "../php/mail.php", //Change
+                data: `name=${name1?.value || 'Имя отсутствует'}&phone=${phone1?.value || 'Телефон отсутствует'}&email=${email1?.value || 'Почта отсутствует'}&project_name=b2b-supplies&admin_email=admin%40mail.com&form_subject=Form+Subject&comments=${comments1?.value || 'Сообщение отсутствует'}`
+            }).done(function() {
+                modal.style.display = "none";
+            });
+            e.preventDefault();
+        }
+    }, false);
 
     for(let elem of navFooter) {
         const year = elem.parentNode.getElementsByTagName('span')[0];
         year.innerHTML = year.innerHTML.replace('2022', currentYear)
     }
 
-    scrollDown.addEventListener('click',() => {
+    scrollDown?.addEventListener('click',() => {
         window.scrollBy({
             top: document.body.scrollHeight,
             behavior : "smooth"
