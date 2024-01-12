@@ -1306,11 +1306,6 @@ if ($(".element-item").length > 0) {
 }
 //   Init Ajax------------------
 $(function () {
-    $.coretemp({
-        reloadbox: "#wrapper",
-        outDuration: 700,
-        inDuration: 200
-    });
     readyFunctions();
     $(document).on({
         ksctbCallback: function () {
