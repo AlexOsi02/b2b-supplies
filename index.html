@@ -28,6 +28,17 @@
         webvisor:true
 		});
 		</script>
+        <script>
+            function CBR_XML_Daily_Ru(rates) {
+                const CNYrate = rates.Valute.CNY.Value.toFixed(4).replace('.', ',');
+                const CNY = document.getElementById('CNY');
+                const purchaseAmount = document.getElementById('purchase-amount');
+                CNY.innerHTML = CNY.innerHTML.replace('00,0000', CNYrate);
+                purchaseAmount.innerHTML = purchaseAmount.innerHTML.replace('00,0000', (Number(CNYrate.replace(',', '.')) * 5000).toFixed(2).replace('.', ','))
+            }
+        </script>
+        <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
+        <script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
 		<noscript><div><img src="https://mc.yandex.ru/watch/90971864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		<!-- /Yandex.Metrika counter -->
     </head>
@@ -435,11 +446,34 @@
                             <!--section -->
                             <!--команда тут-->
                             <!--section end-->
-                            <div class="section-separator fl-wrap"><span></span></div>
                             <!-- section  -->
-                            <section class="scroll_sec" id="sec4">
-                                <img src="images/infographics.png" class="infographics"/>
+                            <section class="scroll_sec" id="sec3">
+                                <div class="container">
+                                    <div class="section-title">
+                                        <h3>Как мы доставляем?</h3>
+                                        <p>НИЖЕ ВЫ МОЖЕТЕ УВИДЕТЬ КАК МЫ ДОСТАВЛЯЕМ МЕЖДУНАРОДНЫЕ СБОРНЫЕ ГРУЗЫ</p>
+                                    </div>
+                                    <img src="images/infographics.png" class="infographics"/>
+                                </div>
                                 <div class="section-number"> <span>0</span>3. </div> <!--при добавлении команды поменять на 4-->
+                            </section>
+
+                            <div class="section-separator fl-wrap"><span></span></div>
+
+                            <section class="scroll_sec" id="sec4">
+                                <div class="container">
+                                    <div class="section-title">
+                                        <h3>Условия доставки</h3>
+                                        <p>НИЖЕ ВЫ МОЖЕТЕ ОЗНАКОМИТЬСЯ С УСЛОВИЯМИ ДОСТАВКИ</p>
+                                    </div>
+                                    <ul class="border">
+                                        <li id="purchase-amount">Закупка от 5000 юаней (~00,0000 руб.)</li>
+                                        <div id="CNY" class="course">*Актуальный курс Юань-Рубль : 00,0000 руб.</div>
+                                        <li>Конвертация валюты до 5%</li>
+                                        <li>Агентская комиссия до 10%</li>
+                                    </ul>
+                                </div>
+                                <div class="section-number"> <span>0</span>4. </div> <!--при добавлении команды поменять на 4-->
                             </section>
                             <!--section end-->
                             <div class="section-separator fl-wrap"><span></span></div>
@@ -522,7 +556,7 @@
                                     </div>-->
                                     <!-- client-list end-->
                                 </div>
-                                <div class="section-number"> <span>0</span>4. </div> <!--при добавлении команды поменять на 5-->
+                                <div class="section-number"> <span>0</span>5. </div> <!--при добавлении команды поменять на 5-->
                             </section>
                             <!--section end-->
                         </div>

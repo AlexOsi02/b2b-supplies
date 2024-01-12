@@ -8,7 +8,7 @@
         <meta name="robots" content="index, follow"/>
         <meta name="keywords" content=""/>
         <meta name="description" content=""/>
-        <!--=============== css  ===============-->	
+        <!--=============== css  ===============-->
         <link type="text/css" rel="stylesheet" href="css/plugins.css">
         <link type="text/css" rel="stylesheet" href="css/style.css">
         <link type="text/css" rel="stylesheet" href="css/color.css">
@@ -28,6 +28,17 @@
         webvisor:true
 		});
 		</script>
+        <script>
+            function CBR_XML_Daily_Ru(rates) {
+                const CNYrate = rates.Valute.CNY.Value.toFixed(4).replace('.', ',');
+                const CNY = document.getElementById('CNY');
+                const purchaseAmount = document.getElementById('purchase-amount');
+                CNY.innerHTML = CNY.innerHTML.replace('00,0000', CNYrate);
+                purchaseAmount.innerHTML = purchaseAmount.innerHTML.replace('00,0000', (Number(CNYrate.replace(',', '.')) * 5000).toFixed(2).replace('.', ','))
+            }
+        </script>
+        <link rel="dns-prefetch" href="https://www.cbr-xml-daily.ru/" />
+        <script src="//www.cbr-xml-daily.ru/daily_jsonp.js" async></script>
 		<noscript><div><img src="https://mc.yandex.ru/watch/90971864" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		<!-- /Yandex.Metrika counter -->
     </head>
@@ -41,7 +52,7 @@
         <!-- loader  end-->
         <!-- main start  -->
         <div id="main">
-            <!-- header--> 
+            <!-- header-->
             <header class="main-header">
                 <!-- logo  -->
                 <a href="index.html" class="ajax logo-holder"><img src="images/logo.png" alt=""></a>
@@ -53,8 +64,8 @@
                     <span class="nbs"></span>
                     <div class="menu-button-text">Меню</div>
                 </div>
-                <!-- nav-button-wrap end--> 
-                <!-- header-contacts--> 
+                <!-- nav-button-wrap end-->
+                <!-- header-contacts-->
                 <div class="header-contacts">
                     <ul>
                         <li><span>Позвонить нам </span> <a href="tel:+7(917)168-07-42">+7(917)168-07-42</a></li>
@@ -62,10 +73,10 @@
                     </ul>
                     <a href="contacts.html" class="ajax contacts-btn">Связаться</a>
                 </div>
-                <!-- header-contacts end--> 
+                <!-- header-contacts end-->
             </header>
-            <!-- header end--> 
-            <!-- left-header-->      
+            <!-- header end-->
+            <!-- left-header-->
             <aside class="left-header">
                 <span class="lh_dec color-bg"></span>
                 <div class="left-header_social">
@@ -78,9 +89,9 @@
                 </div>
             </aside>
             <!-- left-header end-->
-            <!-- wrapper  -->	
+            <!-- wrapper  -->
             <div id="wrapper">
-                <!-- navigation menu-->	
+                <!-- navigation menu-->
                 <div class="nav-holder">
                     <div class="nav-holder-wrap but-hol">
                         <div class="nav-container fl-wrap">
@@ -101,22 +112,22 @@
                     </div>
                 </div>
                 <div class="nav-overlay"></div>
-                <!-- navigation menu end  -->	
-                <!-- content-->    
+                <!-- navigation menu end  -->
+                <!-- content-->
                 <div class="content"  data-pagetitle="О нас">
                     <div class="page-scroll-nav">
                         <nav class="scroll-init page-scroll-nav_wrap">
                             <ul class="no-list-style init_hidden_filter">
                                 <li><a class="scroll-link fbgs act-sec" href="#sec1" data-bgtext="01"><span>О нас</span></a></li>
                                 <li><a class="scroll-link fbgs" href="#sec2" data-bgtext="02"><span>Наши услуги</span></a></li>
-                                <!--<li><a class="scroll-link fbgs" href="#sec3" data-bgtext="03"><span>Команда</span></a></li>-->
-                                <li><a class="scroll-link fbgs" href="#sec4" data-bgtext="04"><span>Навыки</span></a></li>
+                                <li><a class="scroll-link fbgs" href="#sec3" data-bgtext="03"><span>Как мы доставляем?</span></a></li>
+                                <li><a class="scroll-link fbgs" href="#sec4" data-bgtext="04"><span>Условия доставки</span></a></li>
                                 <li><a class="scroll-link fbgs" href="#sec5" data-bgtext="05"><span>Наши клиенты</span></a></li>
                             </ul>
                             <div class="psn_button act-filter"><i class="fal fa-sort"></i> Фильтр </div>
                         </nav>
                     </div>
-                    <!-- hero-section-dec-->                  
+                    <!-- hero-section-dec-->
                     <div class="hero-section-dec color-bg">
                         <div class="progress-indicator">
                             <svg xmlns="http://www.w3.org/2000/svg"
@@ -124,12 +135,12 @@
                                 <circle cx="16" cy="16" r="15.9155"
                                     class="progress-bar__background" />
                                 <circle cx="16" cy="16" r="15.9155"
-                                    class="progress-bar__progress 
+                                    class="progress-bar__progress
                                     js-progress-bar" />
                             </svg>
                         </div>
                     </div>
-                    <!-- hero-section-dec end--> 
+                    <!-- hero-section-dec end-->
                     <!--fixed-column-wrap-->
                     <div class="fixed-column-wrap">
                         <div class="pr-bg"></div>
@@ -165,7 +176,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--slideshow-container end--> 
+                            <!--slideshow-container end-->
                             <div class="overlay"></div>
                             <div class="progress-bar-wrap bot-element">
                                 <div class="progress-bar"></div>
@@ -177,19 +188,18 @@
                             </div>
                             <!--fixed-column-wrap_title end-->
                             <div class="fixed-column-dec"></div>
-                            <div class="scroll-notifer">Скроллинг вниз  </div>
                             <div class="section-counter">
                                 <div class="sc_current"><span>01</span></div>
                                 <div class="sc_total"></div>
                             </div>
                             <div class="fcwc-pagination fcwc-wrap"></div>
                         </div>
-                        <!--fixed-column-wrap-content end-->                                     
+                        <!--fixed-column-wrap-content end-->
                     </div>
                     <!--fixed-column-wrap end-->
-                    <!--column-wrap--> 
+                    <!--column-wrap-->
                     <div class="column-wrap">
-                        <!--column-wrap-container -->   
+                        <!--column-wrap-container -->
                         <div class="column-wrap-container fl-wrap">
                             <div class="col-wc_dec"></div>
                             <section class="scroll_sec" id="sec1">
@@ -250,7 +260,7 @@
                                                             <h6>Успешных поставок</h6>
                                                         </div>
                                                     </div>
-                                                    <!-- inline-facts end --> 
+                                                    <!-- inline-facts end -->
                                                 </div>
                                                 <a href="services.html" class="btn ajax  color-bg  fl-btn"><span>Наши сервисы</span></a>
                                             </div>
@@ -261,7 +271,7 @@
                             </section>
                             <!-- section end-->
                             <div class="section-separator fl-wrap"><span></span></div>
-                            <!-- section  --> 
+                            <!-- section  -->
                             <section class="scroll_sec" id="sec2">
                                 <div class="container">
                                     <div class="section-title">
@@ -289,7 +299,7 @@
                                                                 <li>Аудит фабрик</li>
                                                                 <li>Гарантия</li>
                                                             </ul>
-                                                            <p> 
+                                                            <p>
 																<br>Изучаем ваши требования к производителю и ищем подходящие заводы.
 																<br>Проверим качество, подготовим фотоотчет
 																<br>Безопасно выкупим необходимую партию
@@ -376,7 +386,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!--process-wrap   end-->                                         
+                                    <!--process-wrap   end-->
                                     <div class="srv-link-text fl-wrap">
                                         <h4>Готовы начать работать с нами? Связаться с нами</h4>
                                         <a href="contacts.html" class="btn ajax color-bg  fl-btn"><span>Контакты</span></a>
@@ -388,16 +398,39 @@
                             <div class="section-separator fl-wrap"><span></span></div>
                             <!--section -->
                      		<!--команда тут-->
-                            <!--section end-->     
-                            <div class="section-separator fl-wrap"><span></span></div>
-                            <!-- section  -->                      
-                            <section class="scroll_sec" id="sec4">
-                                <img src="images/infographics.png" class="infographics"/>
+                            <!--section end-->
+                            <!-- section  -->
+                            <section class="scroll_sec" id="sec3">
+                                <div class="container">
+                                    <div class="section-title">
+                                        <h3>Как мы доставляем?</h3>
+                                        <p>НИЖЕ ВЫ МОЖЕТЕ УВИДЕТЬ КАК МЫ ДОСТАВЛЯЕМ МЕЖДУНАРОДНЫЕ СБОРНЫЕ ГРУЗЫ</p>
+                                    </div>
+                                    <img src="images/infographics.png" class="infographics"/>
+                                </div>
                                 <div class="section-number"> <span>0</span>3. </div> <!--при добавлении команды поменять на 4-->
+                            </section>
+
+                            <div class="section-separator fl-wrap"><span></span></div>
+
+                            <section class="scroll_sec" id="sec4">
+                                <div class="container">
+                                    <div class="section-title">
+                                        <h3>Условия доставки</h3>
+                                        <p>НИЖЕ ВЫ МОЖЕТЕ ОЗНАКОМИТЬСЯ С УСЛОВИЯМИ ДОСТАВКИ</p>
+                                    </div>
+                                    <ul class="border">
+                                        <li id="purchase-amount">Закупка от 5000 юаней (~00,0000 руб.)</li>
+                                        <div id="CNY" class="course">*Актуальный курс Юань-Рубль : 00,0000 руб.</div>
+                                        <li>Конвертация валюты до 5%</li>
+                                        <li>Агентская комиссия до 10%</li>
+                                    </ul>
+                                </div>
+                                <div class="section-number"> <span>0</span>4. </div> <!--при добавлении команды поменять на 4-->
                             </section>
                             <!--section end-->
                             <div class="section-separator fl-wrap"><span></span></div>
-                            <!--section  --> 
+                            <!--section  -->
                             <section class="scroll_sec" id="sec5">
                                 <div class="container">
                                     <div class="section-title">
@@ -453,7 +486,7 @@
                                                             <div class="testi-avatar"><img src="images/avatar/1.webp" alt=""></div>
                                                             <div class="testimonilas-text fl-wrap">
                                                                 <h3>Наталья Белая</h3>
-                                                                <p>"Заказывала доставку латекса из Малайзии. Я получила конкурентоспособную цену и  сроки. 
+                                                                <p>"Заказывала доставку латекса из Малайзии. Я получила конкурентоспособную цену и  сроки.
 																	Подписали договор и начали работать, в итоге, получилось так, что все сделали под ключ. Моего присутствия почти не было. Очень удобно! Груз получила без повреждений! Спасибо за продуктивную работу!"</p>
                                                                 <span class="testi-number">04.</span>
                                                             </div>
@@ -476,16 +509,16 @@
                                     </div>-->
 									<!-- client-list end-->
                                 </div>
-                                <div class="section-number"> <span>0</span>4. </div> <!--при добавлении команды поменять на 5-->
+                                <div class="section-number"> <span>0</span>5. </div> <!--при добавлении команды поменять на 5-->
                             </section>
-                            <!--section end-->                 
+                            <!--section end-->
                         </div>
-                        <!--column-wrap-container end -->          
+                        <!--column-wrap-container end -->
                     </div>
-                    <!--column-wrap end-->    
+                    <!--column-wrap end-->
                     <div class="to-top-btn to-top"><i class="fal fa-long-arrow-up"></i></div>
                 </div>
-                <!-- content end--> 
+                <!-- content end-->
                 <div id="scroll-down" class="hero-scroll-down-notifer">
                     <div class="scroll-down-wrap ">
                         <div class="mousey">
@@ -499,7 +532,7 @@
                     <div class="close-share-btn"><i class="fal fa-long-arrow-left"></i></div>
                     <div class="share-container fl-wrap  isShare"></div>
                 </div>
-                <!-- share-wrapper  end -->						
+                <!-- share-wrapper  end -->
             </div>
             <!-- wrapper end -->
         </div>
