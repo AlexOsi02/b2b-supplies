@@ -275,6 +275,22 @@ blockquote p {
 	background:#313131;
 	-webkit-transform: translate3d(0,0,0)
 }
+.main-header button {
+	position: absolute;
+	top: -10px;
+	left: 100px;
+	background: transparent;
+	margin-top: 25px;
+	padding: 18px 38px;
+	font-size: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 0;
+	color: #F57500;
+}
 .logo-holder {
 	position:absolute;
 	top:20px;

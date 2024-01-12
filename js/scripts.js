@@ -1348,11 +1348,18 @@ document.addEventListener("DOMContentLoaded", (event) => {
     const navFooter = document.getElementsByClassName('nav-footer');
     const modal = document.getElementById("myModal");
     const btn = document.getElementById("modal");
+    const btnHeader = document.getElementById("modal-header");
     const span = document.getElementsByClassName("close")[0];
 
     const currentYear = new Date().getFullYear();
 
-    btn.onclick = function() {
+    if(btn) {
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+    }
+
+    btnHeader.onclick = function() {
         modal.style.display = "block";
     }
 

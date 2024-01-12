@@ -47,6 +47,7 @@
                 <a href="index.html" class="ajax logo-holder"><img src="images/logo.png" width="176" height="93" alt=""></a>
                 <!-- logo end -->
                 <!-- nav-button-wrap-->
+                <button id="modal-header" class="btn fl-btn color-bg"><span>Оставить заявку</span></button>
                 <div class="nav-button but-hol">
                     <span  class="ncs"></span>
                     <span class="nos"></span>
@@ -254,6 +255,44 @@
                 <!-- share-wrapper  end -->						
             </div>
             <!-- wrapper end -->
+        </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Оставить заявку</h2>
+                </div>
+                <div class="modal-body">
+                    <form class="custom-form" name="contactform" style="float: unset">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="name" id="name" placeholder="Ваше имя *" value="" maxlength="30" required><br>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="phone" id="phone" placeholder="Ваш номер телефона *" value="" maxlength="12"  required><br>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="email" id="email" placeholder="Email адрес *" value="" maxlength="30" required><br>
+                                </div>
+                            </div>
+
+                            <!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="b2b-supplies">
+                            <input type="hidden" name="admin_email" value="admin@mail.com">
+                            <input type="hidden" name="form_subject" value="Form Subject">
+                            <!-- END Hidden Required Fields -->
+
+                            <textarea name="comments" id="comments" cols="40" rows="3" placeholder="Ваше сообщение:" class="cnt-anim" maxlength="500"></textarea>
+                            <button class="btn fl-btn color-bg"><span>Отправить</span> </button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
         </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
