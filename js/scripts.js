@@ -1344,11 +1344,13 @@ $(document).ready(function() {
 document.addEventListener("DOMContentLoaded", (event) => {
     const scrollDown = document.getElementById('scroll-down')
     const navFooter = document.getElementsByClassName('nav-footer');
-    const year = navFooter[0].parentNode.getElementsByTagName('span')[0];
 
     const currentYear = new Date().getFullYear();
 
-    year.innerHTML = year.innerHTML.replace('2022', currentYear)
+    for(let elem of navFooter) {
+        const year = elem.parentNode.getElementsByTagName('span')[0];
+        year.innerHTML = year.innerHTML.replace('2022', currentYear)
+    }
 
     scrollDown.addEventListener('click',() => {
         window.scrollBy({

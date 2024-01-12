@@ -5375,3 +5375,172 @@ section.parallax-section .bg {
 	margin-bottom: 10px;
 	padding-left: 10px;
 }
+
+.footer {
+	background: #313131;
+}
+
+.footer button {
+	margin-top: 25px;
+	padding: 18px 38px;
+	font-size: 10px;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	font-family: 'Roboto', sans-serif;
+	border-radius: 0;
+	color: #fff;
+}
+
+.footer__main {
+	display: grid;
+	grid-template-columns: auto repeat(2,25%);
+	grid-template-rows: repeat(2,max-content) auto;
+	grid-gap: 24px 80px;
+	grid-template-areas:
+        "submit services company"
+        "requisites services company"
+        "requisites services company"
+        "logo services company";
+	padding: 40px;
+}
+
+.social-list ul {
+	display: flex;
+}
+
+.social-list ul li {
+	width: 48px;
+	height: 48px;
+	background-color: rgba(117,143,166,.1);
+	border-radius: 50%;
+	color: #c6d4e1;
+	font-size: 24px;
+	position: relative;
+	margin-right: 16px;
+}
+
+.social-list ul li a {
+	color: #F57500;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 200ms ease-out;
+	transform: translate(-50%, -50%);
+}
+
+.social-list ul li a:hover {
+	color: white;
+}
+
+.submit-button {
+	display: flex;
+	grid-area: submit;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.requisites {
+	text-align: left;
+	color: white;
+	grid-area: requisites;
+}
+
+.requisites h2 {
+	font-size: 18px;
+	margin-bottom: 20px;
+	color: rgba(255, 255, 255, .6);
+}
+
+.requisites-table {
+	padding-left: 4px;
+	display: grid;
+	grid-template-columns: 100px 1fr;
+	grid-gap: 8px;
+	font-weight: 400;
+	font-size: 12px;
+}
+
+.logo {
+	margin-top: 70px;
+	text-align: left;
+	grid-area: logo;
+}
+
+.logo img {
+	width: 60px;
+}
+
+.company {
+	grid-area: company;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.services {
+	grid-area: services;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+}
+
+.company h2 {
+	margin-bottom: 20px;
+}
+
+.services h2, .company h2 {
+	margin-bottom: 24px;
+}
+.services h2 a, .company h2 a {
+	transition: all 200ms ease-out;
+	cursor: pointer;
+	font-size: 18px;
+	margin-bottom: 24px;
+	color: rgba(255, 255, 255, .6);
+}
+
+.services h2 a:hover, .company h2 a:hover {
+	color: #F57500;
+}
+
+.services a {
+	cursor: pointer;
+	font-size: 16px;
+	margin-bottom: 16px;
+	color: rgba(255, 255, 255);
+	padding-left: 4px;
+}
+
+.services a:hover {
+	transition: all 200ms ease-out;
+	color: #F57500;
+}
+
+.footer__bottom {
+	border-top: 1px solid rgba(198,212,225,.1);
+	padding-left: 40px;
+}
+
+@media (max-width: 850px) {
+	.footer__main {
+		grid-template-areas:
+        "submit services"
+        "requisites services"
+        "logo company"
+        "logo company";
+	}
+}
+
+@media (max-width: 640px) {
+	.footer__main {
+		padding: 32px;
+		grid-template-areas:
+        "submit"
+        "requisites"
+        "services"
+        "company"
+        "logo";
+	}
+}
