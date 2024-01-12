@@ -593,7 +593,7 @@
                                     <!-- END Hidden Required Fields -->
 
                                     <textarea name="comments" id="comments" cols="40" rows="3" placeholder="Ваше сообщение:" class="cnt-anim" maxlength="500"></textarea>
-                                    <button class="btn fl-btn color-bg"><span>Отправить сообщение</span> </button>
+                                    <button class="btn fl-btn color-bg"><span>Рассчитать</span> </button>
                                 </fieldset>
                             </form>
                         </div>
@@ -603,7 +603,7 @@
                 <footer class="footer">
                     <div class="footer__main">
                         <div class="submit-button">
-                            <button class="btn fl-btn color-bg" style="width: 240px; margin-top: 0"><span>Оставить заявку</span></button>
+                            <button id="modal" class="btn fl-btn color-bg" style="width: 240px; margin-top: 0"><span>Оставить заявку</span></button>
                             <div class="social-list">
                                 <ul>
                                     <li><a href="https://www.instagram.com/b2bsupplies?igsh=cnlsa2I0bHFpdHFh" target="_blank"><i class="fab fa-instagram"></i></a></li>
@@ -653,10 +653,49 @@
             </div>
             <!-- wrapper end -->
         </div>
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2>Оставить заявку</h2>
+                </div>
+                <div class="modal-body">
+                    <form class="custom-form" name="contactform" style="float: unset">
+                        <fieldset>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <input type="text" name="name" id="name" placeholder="Ваше имя *" value="" maxlength="30" required><br>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="phone" id="phone" placeholder="Ваш номер телефона *" value="" maxlength="12"  required><br>
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" name="email" id="email" placeholder="Email адрес *" value="" maxlength="30" required><br>
+                                </div>
+                            </div>
+
+                            <!-- Hidden Required Fields -->
+                            <input type="hidden" name="project_name" value="b2b-supplies">
+                            <input type="hidden" name="admin_email" value="admin@mail.com">
+                            <input type="hidden" name="form_subject" value="Form Subject">
+                            <!-- END Hidden Required Fields -->
+
+                            <textarea name="comments" id="comments" cols="40" rows="3" placeholder="Ваше сообщение:" class="cnt-anim" maxlength="500"></textarea>
+                            <button class="btn fl-btn color-bg"><span>Отправить</span> </button>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+
+        </div>
         <!-- Main end -->
         <!--=============== scripts  ===============-->
-        <script   src="js/jquery.min.js"></script>
-        <script   src="js/plugins.js"></script>
-        <script   src="js/scripts.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/plugins.js"></script>
+        <script src="js/scripts.js"></script>
     </body>
 </html>

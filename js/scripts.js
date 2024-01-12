@@ -1323,6 +1323,7 @@ function readyFunctions() {
 }
 
 $(document).ready(function() {
+    const modal = document.getElementById("myModal");
     //E-mail Ajax Send
     $("form").submit(function() { //Change
         var th = $(this);
@@ -1332,10 +1333,11 @@ $(document).ready(function() {
             data: th.serialize()
         }).done(function() {
             alert("Заявка успешна отправлена");
+            modal.style.display = "none";
             setTimeout(function() {
                 // Done Functions
                 th.trigger("reset");
-            }, 1000);
+            }, 300);
         });
         return false;
     });
@@ -1344,8 +1346,27 @@ $(document).ready(function() {
 document.addEventListener("DOMContentLoaded", (event) => {
     const scrollDown = document.getElementById('scroll-down')
     const navFooter = document.getElementsByClassName('nav-footer');
+    const modal = document.getElementById("myModal");
+    const btn = document.getElementById("modal");
+    const span = document.getElementsByClassName("close")[0];
 
     const currentYear = new Date().getFullYear();
+
+    btn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 
     for(let elem of navFooter) {
         const year = elem.parentNode.getElementsByTagName('span')[0];
