@@ -386,7 +386,7 @@ blockquote p {
 }
 .left-header_social {
 	position:absolute;
-	bottom:340px;
+	bottom:39%;
 	left:50%;
 	margin-left:-22px;
 	width:46px;
@@ -3483,6 +3483,7 @@ section.parallax-section .bg {
 	margin-bottom:50px;
 }
 .process-details  {
+	min-height: 281px;
 	text-align: left;
 	float: left;
 	width: 100%;
@@ -5680,6 +5681,10 @@ section.parallax-section .bg {
 	color: white;
 }
 
+.process-details p {
+	margin-top: 10px;
+}
+
 @media (max-width: 920px) {
 	.rounded {
 		grid-template-columns: repeat(2, 1fr);
@@ -5690,5 +5695,11 @@ section.parallax-section .bg {
 	.rounded {
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(5, 180px);
+	}
+}
+
+@media (max-width: 767px) {
+	.process-details {
+		min-height: unset;
 	}
 }
